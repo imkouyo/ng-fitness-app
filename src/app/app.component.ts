@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component, ViewChild, ViewChildren} from '@angular/core';
+import {MatSidenav} from '@angular/material';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'fitness-app';
+  @ViewChild('sidenav', {read: true, static: false} ) ele: MatSidenav;
+  onToggle() {
+    this.ele.toggle();
+  }
+
 }
