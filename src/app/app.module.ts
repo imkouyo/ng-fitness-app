@@ -16,7 +16,9 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import { HeaderComponent } from './navigation/header/header.component';
 import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.component';
-import {MatSelectModule} from '@angular/material';
+import {MatProgressSpinnerModule, MatSelectModule} from '@angular/material';
+import { TetrisComponent } from './tetris/tetris.component';
+import {StopTrainingComponent} from './training/current-training/stop-training.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,9 @@ import {MatSelectModule} from '@angular/material';
     PastTrainingsComponent,
     WelcomeComponent,
     HeaderComponent,
-    SidenavListComponent
+    SidenavListComponent,
+    TetrisComponent,
+    StopTrainingComponent,
   ],
   imports: [
     BrowserModule,
@@ -39,8 +43,10 @@ import {MatSelectModule} from '@angular/material';
     FlexLayoutModule,
     FormsModule,
     ReactiveFormsModule,
+    MatProgressSpinnerModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [StopTrainingComponent]
 })
 export class AppModule { }

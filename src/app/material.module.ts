@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import {
   MatButtonModule, MatCardModule,
   MatCheckboxModule,
-  MatDatepickerModule,
+  MatDatepickerModule, MatDialogModule,
   MatFormFieldModule, MatIconModule,
   MatInputModule, MatListModule,
   MatNativeDateModule, MatSelectModule, MatSidenavModule, MatTabsModule, MatToolbarModule
@@ -23,7 +23,8 @@ import {
     MatSelectModule,
     MatSidenavModule,
     MatTabsModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatDialogModule
   ],
   exports: [
     MatButtonModule,
