@@ -20,7 +20,7 @@ import { TetrisComponent } from './tetris/tetris.component';
 import {StopTrainingComponent} from './training/current-training/stop-training.component';
 import {AuthService} from './auth/auth.service';
 import {TrainingService} from './training/training.service';
-import {MatSortModule} from '@angular/material';
+import {MatPaginatorModule, MatSortModule} from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -46,6 +46,7 @@ import {MatSortModule} from '@angular/material';
     FormsModule,
     ReactiveFormsModule,
     MatSortModule,
+    MatPaginatorModule,
   ],
   providers: [AuthService, TrainingService],
   bootstrap: [AppComponent],
