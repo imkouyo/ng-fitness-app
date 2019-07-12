@@ -21,6 +21,10 @@ import {StopTrainingComponent} from './training/current-training/stop-training.c
 import {AuthService} from './auth/auth.service';
 import {TrainingService} from './training/training.service';
 import {MatPaginatorModule, MatSortModule} from '@angular/material';
+import {AngularFireModule} from '@angular/fire';
+import {environment} from '../environments/environment';
+import {AngularFireStorageModule} from '@angular/fire/storage';
+import {AngularFirestore} from '@angular/fire/firestore';
 
 @NgModule({
   declarations: [
@@ -47,8 +51,10 @@ import {MatPaginatorModule, MatSortModule} from '@angular/material';
     ReactiveFormsModule,
     MatSortModule,
     MatPaginatorModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireStorageModule,
   ],
-  providers: [AuthService, TrainingService],
+  providers: [AuthService, TrainingService, AngularFirestore],
   bootstrap: [AppComponent],
   entryComponents: [StopTrainingComponent]
 })
